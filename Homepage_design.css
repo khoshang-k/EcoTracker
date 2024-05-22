@@ -7,7 +7,7 @@ body {
 
 .header {
     background-color: black;
-    opacity: 0.5;
+    opacity: 0.9;
     margin-top: -22px;
     margin-left: -20px;
     margin-right: -20px;
@@ -15,3 +15,7 @@ body {
 .logo{
     margin-left: 20px;
 }   
+.container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
