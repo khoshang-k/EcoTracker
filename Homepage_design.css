@@ -1,0 +1,17 @@
+body {
+    background-image: url(./Images/Untitled\ design.png);
+    background-repeat: repeat-x;
+    background-size: 80%;
+    
+}
+
+.header {
+    background-color: black;
+    opacity: 0.5;
+    margin-top: -22px;
+    margin-left: -20px;
+    margin-right: -20px;
+}
+.logo{
+    margin-left: 20px;
+}   
