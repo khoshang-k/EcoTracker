@@ -14,8 +14,13 @@ body {
 }
 .logo{
     margin-left: 20px;
+
 }   
-.container{
-    display: grid;
-    grid-template-columns: 50% 50%;
+div.container {
+  width:100%;
+  overflow:auto;
+}
+div.container div {
+  width:50%;  
+  float:left;
 }
