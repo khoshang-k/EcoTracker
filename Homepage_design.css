@@ -14,13 +14,4 @@ body {
 }
 .logo{
     margin-left: 20px;
-
 }   
-div.container {
-  width:100%;
-  overflow:auto;
-}
-div.container div {
-  width:50%;  
-  float:left;
-}
