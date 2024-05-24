@@ -1,17 +1,95 @@
-body {
-    background-image: url(./Images/Untitled\ design.png);
-    background-repeat: repeat-x;
-    background-size: 80%;
-    
+@media (prefers-color-scheme: light) {
+  :root {
+    --text: #0e1703;
+    --background: #fafcf8;
+    --primary: #80c43b;
+    --secondary: #8c8aef;
+    --accent: #db4fe8;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #f3fce8;
+    --background: #050703;
+    --primary: #80c43b;
+    --secondary: #121075;
+    --accent: #a317b0;
+  }
+}
+.page-1{
+  display: flex;
+  flex-direction: column;
 }
 
-.header {
-    background-color: black;
-    opacity: 0.9;
-    margin-top: -22px;
-    margin-left: -20px;
-    margin-right: -20px;
+.header{
+  background-color: #050703;
+  display: flex;
+  align-items: center;
+  margin-top: -10px;
+  margin-left: -10px;
+  margin-right: -10px;
 }
 .logo{
-    margin-left: 20px;
-}   
+  flex-basis: 79%; 
+}
+.signup-div{
+  width: auto;
+  flex-basis: 7%; 
+  align-items: center;
+}
+.login-div{
+  width: auto;
+  flex-basis: 7%;
+  align-items: center;
+}
+.setting-div{
+  width: auto;
+  flex-basis: 7%;
+  align-items: center;
+}
+.signup{
+  color: var(--text);
+  background-color: var(--secondary);
+  height: 40px;
+  width: 80px;
+  border-radius: 20px;
+}
+.login{
+  color: var(--text);
+  background-color: var(--primary);
+  height: 40px;
+  width: 80px;
+  border-radius: 20px;
+}
+.setting{
+  height: 20px;
+  width: 20px;
+}
+.hero-image{
+  display: flex;
+  background-image: url(./Images/background.jpg);
+  background-color: var(--background);
+  height: 90vh;
+  margin-left: -10px;
+  margin-right: -10px;  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.hero-text {  
+  background-color: rgb(187,230,144,0.6);
+  
+  border-radius: 5vh;
+  text-align: center;
+  position: absolute;
+  top: 15vh;
+  left: 5vw;
+  width: 50vw;
+  height:70vh;
+  color: white;
+}
+.page-2{
+  background-color: black ;
+  height: 100vh;
+}
