@@ -4,32 +4,53 @@
 <head>
   <meta content="width=device-width; initial-scale=1.0; maximum-scale=1.0;  user-scalable=0;" name="viewport" />
   <link rel="stylesheet" href="./Homepage_design.css" />
+  <link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'>
   <title>EcoTracker: Transform your carbon impact</title> <!--title of the page-->
   <link rel="icon" href="./Images/logo.png" type="image/png" /> <!--logo beside title name-->
 </head>
 
 <body width="device-width"> <!--to change width according to device width-->
+  <!-- Page 1 HTML -->
   <div class="page-1">
     <div class="header">
       <div class="logo">
-        <img src="./Images/LogoWithTextHorizontal.png" alt="EcoTracker: Transform your carbon impact" width="300px"
+        <img src="./Images/LogoWithTextHorizontal.png" alt="EcoTracker: Transform your carbon impact" height="90vh"
           title="EcoTracker: Transform your carbon impact">
       </div>
       <div class="signup-div"><button class="signup">Sign Up</button></div>
       <div class="login-div"><button class="login">Log In</button></div>
-      <div class="setting-div"><img class="setting" src="./Images/settings_icon.png " ></div>
+      <div class="setting-div"><img class="setting" src="./Images/settings_icon.png "></div>
     </div>
     <div class="hero-image">
-      <div class="hero-text">
-        <h1 style="font-size:50px">I am Jane Doe</h1>
-        <h3>And I'm a Photographer</h3>
-        <button>Hire me</button>
+      <div class="hero-background">
+        <div class="hero-text">
+          <p id="hero-heading">Take the First Step Towards a Greener Future</p>
+          <p id="hero-detail">Calculate Your Carbon Footprint and Understand your impact on<br> ​the environment and
+            discover practical ways to reduce it.</p>
+          <button class="hero-button">Get Started Today</button>
+        </div>
       </div>
-      <div class="empty"></div>
     </div>
   </div>
+  <!-- Page 2 HTML -->
   <div class="page-2">
+    <div class="about-page-2">
+      <p id="about-text">Our easy-to-use<br> ​carbon footprint <br>​calculator helps<br> ​you understand<br> ​your carbon<br> ​emissions</p>
+      <button class="about-button">Find out more</button>
+    </div>
+    <div class="image-page-2">
+      <img class="factory-image" src="./Images/factory.png" alt="factory emitting smoke" title="factory emitting smoke">
+    </div>
+  </div>
+  <!-- Page 3 HTML -->
+  <div class="page-3">
+    <div class="image-page-3">
+      <img class="factory-image" src="./Images/analysis.png" alt="factory emitting smoke" title="factory emitting smoke">
+    </div>
+    <div class="about-page-3">
+      <p id="analysis-text">View <mark class="dif-text">Analysis</mark> <br>​and get<br><mark class="dif-text">Suggestions</mark></p>
 
+    </div>
   </div>
 </body>
 <script src="./Homepage_js.js"></script>
