@@ -186,15 +186,20 @@ body {
   background-color: #FF9040;
   height: 100vh;
 }
-.about-page-3{
+.analysis-page-3{
   flex-basis: 50%;
   margin: auto;
-  margin-left: 15vw;
+  text-align: center;
 }
 #analysis-text{
   color: aliceblue;
   font-size: 7vh;
   line-height: 7vh;
+}
+#analysis-description{
+  color: aliceblue;
+  font-size: 3vh;
+  line-height: 3vh;
 }
 .dif-text{
   background-color: transparent;
@@ -204,5 +209,5 @@ body {
   flex-basis: 50%;
   margin-top: auto;
   margin-bottom: auto;
-  margin-left: 20vh;
+  margin-left: 25vh;
 }
