@@ -27,8 +27,8 @@ body {
   font-size: 22px;
 }
 
-/* Page 1 CSS properties */
-.page-1 {
+/* section 1 CSS properties */
+.section-1 {
   display: flex;
   flex-direction: column;
 }
@@ -147,25 +147,28 @@ body {
   font-weight: bold;
 }
 
-/*Page 2 CSS properties*/
-.page-2 {
+/*section 2 CSS properties*/
+.section-2 {
   display: flex;
   flex-direction: row;
   margin: -10px;
   background-color: black;
   height: 100vh;
 }
-.about-page-2{
+
+.about-section-2 {
   flex-basis: 50%;
   margin: auto;
   margin-left: 15vw;
 }
-#about-text{
+
+#about-text {
   color: aliceblue;
   font-size: 6vh;
   line-height: 6vh;
 }
-.about-button{
+
+.about-button {
   background-color: #FF9040;
   width: 18vw;
   height: 8vh;
@@ -173,41 +176,109 @@ body {
   font-size: large;
   border-radius: 4vh;
 }
-.image-page-2{
+
+.image-section-2 {
   flex-basis: 50%;
   margin-top: auto;
   margin-bottom: auto;
 }
-/*Page 3 CSS properties*/
-.page-3 {
+
+/*section 3 CSS properties*/
+.section-3 {
   display: flex;
   flex-direction: row;
   margin: -10px;
   background-color: #FF9040;
   height: 100vh;
 }
-.analysis-page-3{
+
+.analysis-section-3 {
   flex-basis: 50%;
   margin: auto;
   text-align: center;
 }
-#analysis-text{
+
+#analysis-text {
   color: aliceblue;
   font-size: 7vh;
   line-height: 7vh;
 }
-#analysis-description{
+
+#analysis-description {
   color: aliceblue;
   font-size: 3vh;
   line-height: 3vh;
 }
-.dif-text{
+
+.dif-text {
   background-color: transparent;
   color: var(--primary-light);
 }
-.image-page-3{
+
+.image-section-3 {
   flex-basis: 50%;
   margin-top: auto;
   margin-bottom: auto;
   margin-left: 25vh;
+  height: 70svh;
+  width: 56svw;
+}
+
+/* @media only screen and (max-width: 600px) {
+  .hero-background{
+    background-color: #121075;
+  }
+} */
+/*section 4 CSS properties*/
+.section-4 {
+  display: flex;
+  flex-direction: row;
+  margin: -10px;
+  background-color: aliceblue;
+  height: 100vh;
+}
+
+.text-section-4 {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 5%;
+}
+
+.heading-section-4{
+  font-weight: 500;
+}
+
+.question{
+  font-size: 3vh;
+}
+/* Section 5 CSS properties */
+.section-5{
+  display: flex;
+  flex-direction: row;
+  margin: -10px;
+  background-color: black;
+  height: 50vh;
+  color: aliceblue;
+}
+.information{
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+}
+.web-name{
+  font-family: 'Bodoni Moda';
+  font-weight: bold;
+}
+.contact-us{
+  font-size: 3vh;
+}
+.quote{
+  flex-basis: 50%;
+}
+#contact{
+  font-size: 3vh;
+}
+#email{
+  font-size: 2vh;
 }
