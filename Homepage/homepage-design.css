@@ -12,10 +12,12 @@
 
 
 body {
-    font-family: 'DM Sans';
+    font-family: 'DM Sans', 'sans-serif', 'Times New Roman';
     font-size: 22px;
 }
 
+/* CSS settings for large devices- laptops & desktops */
+/* Section 1 CSS settings */
 .section-1 {
     display: grid;
     grid-template-rows: 2fr 17fr;
@@ -33,7 +35,7 @@ body {
     grid-template-columns: 8fr 12fr 3fr 3fr 1fr;
     grid-template-areas: 'logo blank signup login setting';
     align-items: center;
-    margin-top: -1svh;
+    margin-top: -2svh;
     margin-left: -10px;
     margin-right: -10px;
 }
@@ -118,6 +120,11 @@ body {
     font-size: 5vh;
     color: black;
     margin-bottom: auto;
+    /* animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: fadeIn 2s;
+    -ms-animation: fadeIn 2s; */
 }
 
 #hero-detail {
@@ -128,7 +135,12 @@ body {
     font-weight: 550;
     color: black;
     margin-bottom: auto;
-}
+    /* animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: fadeIn 2s;
+    -ms-animation: fadeIn 2s;*/
+} 
 
 .hero-button {
     margin-left: 2vw;
@@ -144,8 +156,14 @@ body {
     font-size: 15px;
     border-width: 0;
     font-weight: bold;
+    /* animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: fadeIn 2s;
+    -ms-animation: fadeIn 2s; */
 }
 
+/* Section 2 CSS settings */
 .section-2 {
     display: grid;
     grid-template-columns: 2fr 6fr 2fr 5fr 2fr;
@@ -193,6 +211,7 @@ body {
     width: 85%;
 }
 
+/* Section 3 CSS settings */
 .section-3 {
     display: grid;
     grid-template-columns: 2fr 5fr 2fr 6fr 2fr;
@@ -240,6 +259,7 @@ body {
     object-fit: cover;
 }
 
+/* Section 4 CSS settings */
 .section-4 {
     display: flex;
     flex-direction: row;
@@ -262,6 +282,7 @@ body {
     font-size: 3vh;
 }
 
+/* Section 5 CSS settings */
 .section-5 {
     display: grid;
     grid-template-columns: 4fr 3fr 10fr;
@@ -308,8 +329,10 @@ body {
     font-size: 2vh;
 }
 
-/* Layout for screens like tabs */
+/* CSS settings for medium sized devices- Tablets */
 @media only screen and (max-width: 1000px) {
+
+    /* Section 1 CSS settings */
     .section-1 {
         grid-template-rows: 1fr 17fr;
     }
@@ -378,7 +401,7 @@ body {
         font-size: 15px;
     }
 
-    /* Section 2 */
+    /* Section 2 CSS settings */
 
 
     #about-text {
@@ -395,7 +418,7 @@ body {
         width: 100%;
     }
 
-    /* section 3 */
+    /* Section 3 CSS settings */
 
     #analysis-text {
         font-size: 5vh;
@@ -413,7 +436,7 @@ body {
         object-fit: cover;
     }
 
-    /* section 4 */
+    /* Section 4 CSS settings */
     .section-4 {
         height: 100vh;
     }
@@ -422,7 +445,7 @@ body {
         font-size: 2.5vh;
     }
 
-    /* section 5 */
+    /* Section 5 CSS settings */
     .section-5 {
         grid-template-columns: 4fr 2fr 10fr;
         grid-template-rows: 1fr 1fr 1fr;
@@ -430,7 +453,10 @@ body {
     }
 }
 
+/* CSS settings for small devices- mobiles */
 @media only screen and (max-width: 750px) {
+
+    /* Section 1 CSS settings */
     .section-1 {
         grid-template-rows: 6vh auto;
         height: 80vh;
@@ -551,9 +577,8 @@ body {
         width: 50vw;
     }
 
-    /* section 2 */
-
-    .section-2 {
+    /* section 2 CSS settings */
+    */ .section-2 {
         grid-template-rows: 1fr 2fr 2fr;
         grid-template-columns: 1fr;
         margin: -10px;
@@ -605,6 +630,7 @@ body {
         width: 100vw;
     }
 
+    /* Section 3 CSS settings */
     .section-3 {
         grid-template-rows: 1fr 3fr 2fr;
         grid-template-columns: 1fr;
@@ -654,7 +680,7 @@ body {
         width: 100vw;
     }
 
-    /* section 4 */
+    /* section 4 CSS settings */
     .section-4 {
         height: 130vh;
     }
@@ -663,7 +689,7 @@ body {
         font-size: 2vh;
     }
 
-    /* section 5 */
+    /* section 5 CSS settings */
     .section-5 {
         display: grid;
         grid-template-columns: 1fr;
@@ -710,3 +736,72 @@ body {
     }
 
 }
+/* transitions */
+/* @keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-20%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-20%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-20%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-20%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@-ms-keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-20%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+} */
+
+
+/*
+
+     /\_/\
+    ( o.o )==Meow, KHKA!!!
+     > ^ <
+
+ */
