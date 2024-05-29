@@ -10,6 +10,17 @@
     }
 }
 
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text: #0e1703;
+        --background: #fafcf8;
+        --primary: #80c43b;
+        --primary-light: #9AE450;
+        --secondary: #8c8aef;
+        --secondary-light: #d9d9f5;
+        --accent: #db4fe8;
+    }
+}
 
 body {
     font-family: 'DM Sans', 'sans-serif', 'Times New Roman';
@@ -32,12 +43,61 @@ body {
     background-color: #050703;
     grid-area: heading;
     display: grid;
-    grid-template-columns: 8fr 12fr 3fr 3fr 1fr;
+    grid-template-columns: 8fr 12fr 3fr 3fr 3fr;
     grid-template-areas: 'logo blank signup login setting';
     align-items: center;
     margin-top: -2svh;
     margin-left: -10px;
     margin-right: -10px;
+}
+
+.setting-div {
+    width: auto;
+    grid-area: setting;
+    align-items: center;
+}
+.setting{
+    color: black;
+    background-color: #d9d9f5;
+    height: 55px;
+    width: 120px;
+    border-width: 0;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.setting-div {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+
+.setting-div:hover .dropdown-content {
+    display: block;
+}
+
+.setting-div:hover .setting {
+    background-color: #3e8e41;
 }
 
 .logo {
@@ -55,12 +115,6 @@ body {
 .login-div {
     width: auto;
     grid-area: login;
-    align-items: center;
-}
-
-.setting-div {
-    width: auto;
-    grid-area: setting;
     align-items: center;
 }
 
@@ -96,15 +150,21 @@ body {
     border: 2px solid #107305;
 }
 
-.setting {
-    height: 20px;
-    width: 20px;
+/* .setting {
+    color: black;
+    background-color: #d9d9f5;
+    height: 55px;
+    width: 120px;
+    border-width: 0;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: bold;
 }
 
 .setting:hover {
     height: 30px;
     width: 30px;
-}
+} */
 
 .hero-image {
     grid-area: hero;
@@ -384,8 +444,10 @@ body {
     }
 
     .setting {
-        height: 20px;
-        width: 20px;
+        height: 40px;
+        width: 96px;
+        border-radius: 24px;
+        font-size: 12px;
     }
 
     .hero-image {
@@ -491,7 +553,7 @@ body {
     }
 
     .header {
-        grid-template-columns: 10fr 3fr 3fr 1fr;
+        grid-template-columns: 10fr 3fr 3fr 3fr;
         grid-template-rows: 6vh;
         grid-template-areas: 'logo signup login setting';
         align-items: center;
@@ -529,32 +591,36 @@ body {
         margin-right: auto;
     }
 
-    .setting-div {
+     .setting-div {
         width: auto;
         grid-area: setting;
         align-items: center;
         margin-top: auto;
         margin-bottom: auto;
-    }
+        margin-left: auto;
+        margin-right: auto;
+    } 
 
     .signup {
         height: 3vh;
-        width: 7vh;
+        width: 5.5vh;
         border-radius: 1vh;
-        font-size: 1vh;
+        font-size: 0.9vh;
     }
 
     .login {
         height: 3vh;
-        width: 7vh;
+        width: 5.5vh;
         border-radius: 1vh;
-        font-size: 1vh;
+        font-size: 0.9vh;
     }
 
     .setting {
-        height: 20px;
-        width: 20px;
-    }
+        height: 3vh;
+        width: 5.5vh;
+        border-radius: 1vh;
+        font-size: 0.9vh;
+    } 
 
     .hero-image {
         grid-area: hero;
