@@ -77,7 +77,7 @@ body {
     display: none;
     position: absolute;
     background-color: #f1f1f1;
-    min-width: 100px;
+    min-width: 80px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
@@ -87,6 +87,7 @@ body {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    font-size: medium;
 }
 
 .dropdown-content a:hover {
