@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./signuplogin_design.css" />
-    <title>Sign up</title>   <!--title of the page-->
+    <title>Sign up</title> <!--title of the page-->
     <link rel="icon" href="./Images/logo.png" type="image/png" /> <!--logo beside title name-->
 </head>
 
@@ -20,35 +20,39 @@
     <div class="container">
         <div class="forms-container">
             <div class="signin-signup">
-                <form action="#" class="sign-in-form">
-                    <h2 class="title">Sign in</h2>
-                    <div class="input-field">
-                        <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Username" />
-                    </div>
-                    <div class="input-field">
-                        <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Password" />
-                    </div>
-                    <input type="submit" value="Login" class="btn solid" />
-                    <a class="forgot-password" href="">Forgot password?</a>
-                </form>
-                <form action="#signup" class="sign-up-form">
-                    <h2 class="title">Sign up</h2>
-                    <div class="input-field">
-                        <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Username" />
-                    </div>
-                    <div class="input-field">
-                        <i class="fas fa-envelope"></i>
-                        <input type="email" placeholder="Email" />
-                    </div>
-                    <div class="input-field">
-                        <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Password" />
-                    </div>
-                    <input type="submit" class="btn" value="Sign up" />
-                </form>
+                <div id="signup-mark">
+                    <form action="#" class="sign-in-form">
+                        <h2 class="title">Log in</h2>
+                        <div class="input-field">
+                            <i class="fas fa-user"></i>
+                            <input type="text" placeholder="Username" />
+                        </div>
+                        <div class="input-field">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" placeholder="Password" />
+                        </div>
+                        <input type="submit" value="Login" class="btn solid" />
+                        <a class="forgot-password" href="">Forgot password?</a>
+                    </form>
+                </div>
+                <div id="login-mark">
+                    <form action="#signup" class="sign-up-form">
+                        <h2 class="title">Sign up</h2>
+                        <div class="input-field">
+                            <i class="fas fa-user"></i>
+                            <input type="text" placeholder="Username" />
+                        </div>
+                        <div class="input-field">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" placeholder="Email" />
+                        </div>
+                        <div class="input-field">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" placeholder="Password" />
+                        </div>
+                        <input type="submit" class="btn" value="Sign up" />
+                    </form>
+                </div>
             </div>
         </div>
 
@@ -74,7 +78,7 @@
                         lifestyle.
                     </p>
                     <button class="btn transparent" id="sign-in-btn">
-                        Sign in
+                        Log in
                     </button>
                 </div>
                 <img src="./Images/forest.svg" class="image" alt="" />

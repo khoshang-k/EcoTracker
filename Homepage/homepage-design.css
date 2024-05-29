@@ -43,8 +43,10 @@ body {
     background-color: #050703;
     grid-area: heading;
     display: grid;
-    grid-template-columns: 8fr 12fr 3fr 3fr 3fr;
-    grid-template-areas: 'logo blank signup login setting';
+    /* grid-template-columns: 8fr 12fr 3fr 3fr 3fr;
+    grid-template-areas: 'logo blank signup login setting'; */
+    grid-template-columns: 8fr 12fr 3fr 3fr;
+    grid-template-areas: 'logo blank login setting';
     align-items: center;
     margin-top: -2svh;
     margin-left: -10px;
@@ -116,6 +118,7 @@ body {
     width: auto;
     grid-area: login;
     align-items: center;
+    margin: auto;
 }
 
 .signup {
@@ -150,21 +153,6 @@ body {
     border: 2px solid #107305;
 }
 
-/* .setting {
-    color: black;
-    background-color: #d9d9f5;
-    height: 55px;
-    width: 120px;
-    border-width: 0;
-    border-radius: 30px;
-    font-size: 15px;
-    font-weight: bold;
-}
-
-.setting:hover {
-    height: 30px;
-    width: 30px;
-} */
 
 .hero-image {
     grid-area: hero;
@@ -553,9 +541,11 @@ body {
     }
 
     .header {
-        grid-template-columns: 10fr 3fr 3fr 3fr;
+        /* grid-template-columns: 10fr 3fr 3fr 3fr;
+        grid-template-areas: 'logo signup login setting'; */
+        grid-template-columns: 10fr 6fr 3fr 3fr;
+        grid-template-areas: 'logo blank login setting';
         grid-template-rows: 6vh;
-        grid-template-areas: 'logo signup login setting';
         align-items: center;
         height: 7vh;
     }
@@ -830,6 +820,34 @@ body {
         font-size: 2vh;
     }
 
+}
+@media only screen and (max-width: 1200px){
+    .header {
+        grid-template-columns: 8fr 8fr 3fr 3fr;
+    }
+}
+@media only screen and (max-width: 1000px){
+    .header {
+        grid-template-columns: 8fr 6fr 3fr 3fr;
+    }
+}
+@media only screen and (max-width: 500px){
+    .header {
+        grid-template-columns: 8fr 2fr 3fr 3fr;
+    }
+}
+@media only screen and (max-width: 320px){
+    #analysis-text {
+        color: aliceblue;
+        font-size: 5vh;
+        line-height: 5vh;
+    }
+
+    #analysis-description {
+        color: aliceblue;
+        font-size: 2vh;
+        line-height: 2vh;
+    }
 }
 
 /* transitions */
