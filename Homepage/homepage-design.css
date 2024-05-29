@@ -69,9 +69,15 @@ body {
     background-color: #d9d9f5;
     height: 55px;
     width: 120px;
+    border-width: 0;
     border-radius: 30px;
     font-size: 15px;
     font-weight: bold;
+}
+
+.signup:hover {
+    background-color: #8a8ae2;
+    border: 2px solid #1005ea;
 }
 
 .login {
@@ -79,14 +85,25 @@ body {
     background-color: #80c43b;
     height: 55px;
     width: 120px;
+    border-width: 0;
     border-radius: 30px;
     font-size: 15px;
     font-weight: bold;
 }
 
+.login:hover {
+    background-color: #35cd27;
+    border: 2px solid #107305;
+}
+
 .setting {
     height: 20px;
     width: 20px;
+}
+
+.setting:hover {
+    height: 30px;
+    width: 30px;
 }
 
 .hero-image {
@@ -140,7 +157,7 @@ body {
     -moz-animation: fadeIn 2s;
     -o-animation: fadeIn 2s;
     -ms-animation: fadeIn 2s;*/
-} 
+}
 
 .hero-button {
     margin-left: 2vw;
@@ -161,6 +178,11 @@ body {
     -moz-animation: fadeIn 2s;
     -o-animation: fadeIn 2s;
     -ms-animation: fadeIn 2s; */
+}
+
+.hero-button:hover {
+    background-color: #FF9040;
+    border: 2px solid wheat;
 }
 
 /* Section 2 CSS settings */
@@ -197,6 +219,12 @@ body {
     margin-top: auto;
     margin-bottom: auto;
     margin-left: auto;
+    border-width: 0cap;
+}
+
+.about-button:hover {
+    background-color: #80c43b;
+    border: 2px solid wheat;
 }
 
 .image-section-2 {
@@ -505,7 +533,8 @@ body {
         width: auto;
         grid-area: setting;
         align-items: center;
-        margin: auto;
+        margin-top: auto;
+        margin-bottom: auto;
     }
 
     .signup {
@@ -736,6 +765,7 @@ body {
     }
 
 }
+
 /* transitions */
 /* @keyframes fadeIn {
     0% {
