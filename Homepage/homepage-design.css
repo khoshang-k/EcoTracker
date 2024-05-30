@@ -115,6 +115,13 @@ body {
     height: 13vh;
 }
 
+#logo-image {
+    height: 12vh;
+    width: 70%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
 .signup-div {
     width: auto;
     grid-area: signup;
@@ -184,6 +191,7 @@ body {
     grid-template-columns: 2fr 3fr;
     grid-template-rows: repeat(5, 1fr);
 }
+
 
 #hero-heading {
     margin-left: 2vw;
@@ -420,7 +428,7 @@ body {
     z-index: 99;
     border: none;
     outline: none;
-    background-color: rgb(255,0,0,0.7);
+    background-color: rgb(255, 0, 0, 0.7);
     color: white;
     cursor: pointer;
     padding: 0px;
@@ -558,8 +566,9 @@ body {
         grid-template-rows: 1fr 1fr 1fr;
         height: 50vh;
     }
+
     /* go to top button */
-    #myBtn{
+    #myBtn {
         height: 40px;
         width: 40px;
     }
@@ -860,7 +869,8 @@ body {
     .header {
         grid-template-columns: 8fr 8fr 3fr 3fr;
     }
-    #about-text{
+
+    #about-text {
         font-size: 5vh;
         line-height: 6vh;
     }
@@ -870,7 +880,8 @@ body {
     .header {
         grid-template-columns: 8fr 6fr 3fr 3fr;
     }
-    #about-text{
+
+    #about-text {
         font-size: 4vh;
         line-height: 5vh;
     }
@@ -879,10 +890,6 @@ body {
 @media only screen and (max-width: 500px) {
     .header {
         grid-template-columns: 8fr 2fr 3fr 3fr;
-    }
-    #myBtn{
-        height: 30px;
-        width: 30px;
     }
 }
 
