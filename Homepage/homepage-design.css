@@ -24,11 +24,21 @@
 
 html {
     scroll-behavior: smooth;
+    margin: 0;
 }
 
 body {
     font-family: 'DM Sans', 'sans-serif', 'Times New Roman';
     font-size: 22px;
+    height: 120vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+div {
+    transform-style: preserve-3d;
+    position: relative;
+    /* height of text section */
 }
 
 /* CSS settings for large devices- laptops & desktops */
@@ -41,6 +51,7 @@ body {
         'heading'
         'hero';
     height: 100vh;
+    z-index: 99;
 }
 
 .header {
@@ -118,8 +129,6 @@ body {
 #logo-image {
     height: 12vh;
     width: 70%;
-    margin-top: auto;
-    margin-bottom: auto;
 }
 
 .signup-div {
@@ -131,8 +140,6 @@ body {
 .login-div {
     width: auto;
     grid-area: login;
-    align-items: center;
-    margin: auto;
 }
 
 .signup {
@@ -248,25 +255,35 @@ body {
     border: 2px solid wheat;
 }
 
-/* Section 2 CSS settings */
+.break-i {
+    height: 15vh;
+    background-color: #050703;
+    margin-left: -10px;
+    margin-right: -10px;
+    z-index: 99;
+}
+
+/* Section 2 HTML */
 .section-2 {
     display: grid;
-    grid-template-columns: 2fr 6fr 2fr 5fr 2fr;
-    grid-template-rows: 1fr 3fr 1fr 1fr;
+    grid-template-columns: auto 50vw auto;
+    grid-template-rows: auto 30vh 10vh auto;
     margin: -10px;
     background-color: black;
-    height: 100vh;
+    height: 80vh;
+    z-index: 99;
 }
 
 #about-text {
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: auto;
+    margin: auto;
     grid-column: 2/3;
     grid-row: 2/3;
     color: aliceblue;
     font-size: 6vh;
     line-height: 6vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .about-button {
@@ -290,31 +307,129 @@ body {
     border: 2px solid wheat;
 }
 
-.image-section-2 {
-    grid-column: 4/5;
-    grid-row: 2/4;
+.break {
+    height: 15vh;
+    background-color: #050703;
+    margin-left: -10px;
+    margin-right: -10px;
+    z-index: 99;
+}
+
+.factory-image {
+    /* height of image */
+    height: 60vh;
+    width: 80vw;
+}
+
+.factory-image::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateZ(-1px) scale(1.5);
+    background-size: 100%;
+    z-index: -1;
+}
+
+.bg-i::after {
+    background: url("./Images/smoke-hq-1.jpg");
+    background-size: cover;
+    background-position-y: 100%;
+    background-position-x: center;
+}
+
+/* Section 2 HTML */
+.section-2 {
+    display: grid;
+    grid-template-columns: auto 50vw auto;
+    grid-template-rows: auto 30vh 10vh auto;
+    margin: -10px;
+    background-color: black;
+    height: 80vh;
+    z-index: 99;
+}
+
+#about-text {
+    margin: auto;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    color: aliceblue;
+    font-size: 6vh;
+    line-height: 6vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.about-button {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    background-color: #FF9040;
+    width: 18vw;
+    height: 8vh;
+    font-weight: bold;
+    font-size: large;
+    border-radius: 4vh;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    border-width: 0cap;
+}
+
+.about-button:hover {
+    background-color: #80c43b;
+    border: 2px solid wheat;
+}
+
+/* Section 3 CSS */
+.analysis-image {
+    /* height of image */
+    height: 70vh;
+    width: 80vw;
+}
+
+.analysis-image::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateZ(-1px) scale(1.5);
+    background-size: 100%;
+    z-index: -1;
+}
+
+.bg-ii::after {
+    background: url("./Images/analysis-hq-1.jpg");
+    background-size: cover;
+    background-position-y: 10%;
+    background-position-x: center;
+}
+
+.section-3 {
+    display: grid;
+    grid-template-columns: auto 50vw auto;
+    grid-template-rows: auto 30vh 10vh auto;
+    margin: -10px;
+    background-color: #FF9040;
+    height: 70vh;
+}
+
+.analysis-section-3 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    text-align: center;
     margin-top: auto;
     margin-bottom: auto;
 }
 
-.factory-image {
-    height: auto;
-    width: 85%;
-}
-
-/* Section 3 CSS settings */
-.section-3 {
-    display: grid;
-    grid-template-columns: 2fr 5fr 2fr 6fr 2fr;
-    grid-template-rows: 1fr 1fr 3fr 1fr;
-    margin: -10px;
-    background-color: #FF9040;
-    height: 100vh;
-}
-
-.analysis-section-3 {
-    grid-column: 4/5;
-    grid-row: 2/4;
+.analysis-section-3-ii {
+    grid-column: 2/3;
+    grid-row: 3/4;
     text-align: center;
     margin-top: auto;
     margin-bottom: auto;
@@ -334,20 +449,15 @@ body {
 
 .dif-text {
     background-color: transparent;
-    color: #80c43b;
+    color: #73d510;
 }
 
-.image-section-3 {
-    grid-column: 2/3;
-    grid-row: 2/4;
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-.analysis-image {
-    height: auto;
-    width: 90%;
-    object-fit: cover;
+.break-ii {
+    height: 15vh;
+    background-color: #FF9040;
+    margin-left: -10px;
+    margin-right: -10px;
+    z-index: 99;
 }
 
 /* Section 4 CSS settings */
@@ -399,6 +509,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: auto;
+    text-align: left;
     grid-row: 2/3;
     grid-column: 1/2;
     font-size: 3vh;
@@ -425,7 +536,7 @@ body {
     position: fixed;
     bottom: 20px;
     right: 30px;
-    z-index: 99;
+    z-index: 100;
     border: none;
     outline: none;
     background-color: rgb(255, 0, 0, 0.7);
@@ -442,531 +553,319 @@ body {
     background-color: #555;
 }
 
-/* CSS settings for medium sized devices- Tablets */
-@media only screen and (max-width: 1000px) {
+/* Responsive changes for different dimensions */
 
-    /* Section 1 CSS settings */
-    .section-1 {
-        grid-template-rows: 1fr 17fr;
-    }
-
-    #logo-image {
-        height: 10vh;
-    }
-
-    .signup {
-        height: 40px;
-        width: 96px;
-        border-radius: 24px;
-        font-size: 12px;
-    }
-
-    .login {
-        height: 40px;
-        width: 96px;
-        border-radius: 24px;
-        font-size: 12px;
-    }
-
-    .setting {
-        height: 40px;
-        width: 96px;
-        border-radius: 24px;
-        font-size: 12px;
-    }
-
-    .hero-image {
-        grid-template-columns: 1fr 7fr 2fr;
-        grid-template-rows: 1fr 6fr 1fr;
-    }
-
-    .hero-background {
-        border-radius: 5vh;
-        width: 70vw;
-        height: 75vh;
-        color: white;
-        display: grid;
-        grid-template-columns: 3fr 3fr;
-        grid-template-rows: repeat(5, 1fr);
-    }
-
-    #hero-heading {
-        margin-left: 2vw;
-        grid-column: 1/3;
-        grid-row: 2/3;
-        font-size: 5vh;
-        color: black;
-        margin-bottom: auto;
-    }
-
-    #hero-detail {
-        margin-left: 2vw;
-        grid-column: 1/3;
-        grid-row: 3/4;
-        font-size: 3vh;
-        font-weight: 550;
-        color: black;
-        margin-bottom: auto;
-    }
-
-    .hero-button {
-        height: 6vh;
-        width: 30vw;
-        border-radius: 30px;
-        font-size: 15px;
-    }
-
-    /* Section 2 CSS settings */
-
-
-    #about-text {
-        font-size: 5vh;
-        line-height: 5vh;
-    }
-
-    .about-button {
-        margin-left: 0%;
-    }
-
-    .factory-image {
-        height: auto;
-        width: 100%;
-    }
-
-    /* Section 3 CSS settings */
-
-    #analysis-text {
-        font-size: 5vh;
-        line-height: 5vh;
-    }
-
-    #analysis-description {
-        font-size: 2.5vh;
-        line-height: 2.5vh;
-    }
-
-    .analysis-image {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-    }
-
-    /* Section 4 CSS settings */
-    .section-4 {
-        height: 100vh;
-    }
-
-    .question {
-        font-size: 2.5vh;
-    }
-
-    /* Section 5 CSS settings */
-    .section-5 {
-        grid-template-columns: 4fr 2fr 10fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        height: 50vh;
-    }
-
-    /* go to top button */
-    #myBtn {
-        height: 40px;
-        width: 40px;
-    }
-}
-
-/* CSS settings for small devices- mobiles */
-@media only screen and (max-width: 750px) {
-
-    /* Section 1 CSS settings */
-    .section-1 {
-        grid-template-rows: 6vh auto;
-        height: 80vh;
-    }
-
-    .header {
-        /* grid-template-columns: 10fr 3fr 3fr 3fr;
-        grid-template-areas: 'logo signup login setting'; */
-        grid-template-columns: 10fr 6fr 3fr 3fr;
-        grid-template-areas: 'logo blank login setting';
-        grid-template-rows: 6vh;
-        align-items: center;
-        height: 7vh;
-    }
-
-    .logo {
-        margin-left: auto;
-        margin-right: auto;
-        align-items: center;
-        margin-top: auto
-    }
-
-    #logo-image {
-        height: 7vh;
-    }
-
-    .signup-div {
-        width: auto;
-        grid-area: signup;
-        align-items: center;
-        margin-top: auto;
-        margin-bottom: auto;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .login-div {
-        width: auto;
-        grid-area: login;
-        align-items: center;
-        margin-top: auto;
-        margin-bottom: auto;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .setting-div {
-        width: auto;
-        grid-area: setting;
-        align-items: center;
-        margin-top: auto;
-        margin-bottom: auto;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .signup {
-        height: 3vh;
-        width: 5.5vh;
-        border-radius: 1vh;
-        font-size: 0.9vh;
-    }
-
-    .login {
-        height: 3vh;
-        width: 5.5vh;
-        border-radius: 1vh;
-        font-size: 0.9vh;
-    }
-
-    .setting {
-        height: 3vh;
-        width: 5.5vh;
-        border-radius: 1vh;
-        font-size: 0.9vh;
-    }
-
-    .hero-image {
-        grid-area: hero;
-        display: grid;
-        grid-template-columns: 1fr 8fr 1fr;
-        grid-template-rows: 1fr 6fr 1fr;
-        background-image: url(./Images/background.jpg);
-        background-color: #fafcf8;
-        margin-left: -10px;
-        margin-right: -10px;
-    }
-
-    .hero-background {
-        grid-column: 2/3;
-        grid-row: 2/3;
-        background-color: rgb(187, 230, 144, 0.6);
-        border-radius: 5vh;
-        width: 80vw;
-        height: 50vh;
-        color: white;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 1fr);
-    }
-
-    #hero-heading {
-        margin-left: 4vw;
-        grid-row: 1/2;
-        font-size: 4vh;
-        color: black;
-        margin-bottom: auto;
-    }
-
-    #hero-detail {
-        margin-left: 4vw;
-        grid-row: 2/3;
-        font-size: 2vh;
-        font-weight: 550;
-        color: black;
-        margin-bottom: auto;
-    }
-
-    .hero-button {
-        margin-bottom: auto;
-        margin-top: auto;
-        margin-left: 6vw;
-        grid-row: 3/4;
-        height: 6vh;
-        width: 50vw;
-    }
-
-    /* section 2 CSS settings */
-    */ .section-2 {
-        grid-template-rows: 1fr 2fr 2fr;
-        grid-template-columns: 1fr;
-        margin: -10px;
-        background-color: black;
-        height: 100vh;
-    }
-
-    #about-text {
-        margin-right: auto;
-        margin-left: auto;
-        margin-top: auto;
-        grid-row: 2/3;
-        grid-column: 1/2;
-        color: aliceblue;
-        font-size: 4vh;
-        line-height: 4vh;
-    }
-
-    .about-button {
-        grid-row: 3/4;
-        grid-column: 1/2;
-        background-color: #FF9040;
-        width: 50vw;
-        height: 8vh;
-        font-weight: bold;
-        font-size: 2vh;
-        border-radius: 4vh;
-        margin-right: auto;
-        margin-top: auto;
-        margin-bottom: auto;
-        margin-left: auto;
-    }
-
-    .image-section-2 {
-        background-image: url(./Images/factory_landscape.jpg);
-        background-repeat: no-repeat;
-        background-position-x: center;
-        background-position-y: 80%;
-        background-size: cover;
-        grid-row: 1/2;
-        grid-column: 1/2;
-        margin-top: auto;
-        margin-bottom: auto;
-    }
-
-    .factory-image {
-        opacity: 0;
-        height: 33vh;
-        width: 100vw;
-    }
-
-    /* Section 3 CSS settings */
-    .section-3 {
-        grid-template-rows: 1fr 3fr 2fr;
-        grid-template-columns: 1fr;
-        height: 100vh;
-    }
-
-    .analysis-section-3 {
-        margin-right: auto;
-        margin-left: auto;
-        margin-top: auto;
-        grid-row: 2/3;
-        grid-column: 1/2;
-    }
-
-    #analysis-text {
-        color: aliceblue;
-        font-size: 7vh;
-        line-height: 7vh;
-    }
-
-    #analysis-description {
-        color: aliceblue;
-        font-size: 3vh;
-        line-height: 3vh;
-    }
-
-    .dif-text {
-        background-color: transparent;
-        color: #80c43b;
-    }
-
-    .image-section-3 {
-        background-image: url(./Images/analysis_landscape.jpg);
-        background-repeat: no-repeat;
-        background-position-x: center;
-        background-position-y: 80%;
-        background-size: cover;
-        grid-row: 1/2;
-        grid-column: 1/2;
-        margin-top: auto;
-        margin-bottom: auto;
-    }
-
-    .analysis-image {
-        opacity: 0;
-        height: 33vh;
-        width: 100vw;
-    }
-
-    /* section 4 CSS settings */
-    .section-4 {
-        height: 130vh;
-    }
-
-    .question {
-        font-size: 2vh;
-    }
-
-    /* section 5 CSS settings */
-    .section-5 {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        margin: -10px;
-        background-color: black;
-        height: 50vh;
-    }
-
-    .web-name {
-        margin-top: auto;
-        margin-left: 3vw;
-        margin-right: auto;
-        grid-row: 1/2;
-        grid-column: 1/2;
-        font-family: 'Bodoni Moda';
-        font-weight: bold;
-    }
-
-    .contact-us {
-        margin-top: auto;
-        margin-left: 3vw;
-        margin-right: auto;
-        margin-bottom: auto;
-        grid-row: 2/3;
-        grid-column: 1/2;
-        font-size: 3vh;
-    }
-
-    .quote {
-        margin-top: auto;
-        margin-left: 3vw;
-        margin-right: auto;
-        grid-column: 1/2;
-        grid-row: 3/4;
-    }
-
-    #contact {
-        font-size: 3vh;
-    }
-
-    #email {
-        font-size: 2vh;
-    }
-
-}
-
-@media only screen and (max-width: 1200px) {
+@media (max-width:1220px) {
     .header {
         grid-template-columns: 8fr 8fr 3fr 3fr;
     }
 
-    #about-text {
-        font-size: 5vh;
-        line-height: 6vh;
+    #hero-heading {
+        font-size: 4.5vh;
+    }
+
+    #hero-detail {
+        font-size: 2.5vh;
+    }
+
+    .hero-background {
+        width: 70vw;
+        height: 65vh;
+    }
+
+    .section-4 {
+        height: 120vh;
+    }
+
+    .login {
+        height: 50px;
+        width: 100px;
+    }
+
+    .setting {
+        height: 50px;
+        width: 100px;
     }
 }
 
-@media only screen and (max-width: 1000px) {
+@media (max-width:1024px) {
+    .section-1 {
+        grid-template-rows: 2fr 19fr;
+    }
+
+    .hero-background {
+        width: 70vw;
+        height: 65vh;
+    }
+
     .header {
         grid-template-columns: 8fr 6fr 3fr 3fr;
     }
 
+    #logo {
+        height: 9vh;
+    }
+
+    .section-2 {
+        grid-template-rows: auto 40vh 10vh auto;
+        grid-template-columns: auto 60vw auto;
+    }
+
+    .section-3 {
+        grid-template-rows: auto 40vh 10vh auto;
+        grid-template-columns: auto 60vw auto;
+    }
+
+    .about-button {
+        width: 20vw;
+    }
+
+    .section-5 {
+        grid-template-columns: 4fr 2fr 10fr;
+    }
+
+    .contact-us {
+        margin-right: 0;
+        padding-left: 3vw;
+    }
+
+}
+
+@media (max-width:800px) {
+    .header {
+        grid-template-columns: 8fr 4fr 3fr 3fr;
+    }
+
+    #logo {
+        height: 7vh;
+    }
+
+    .login {
+        height: 40px;
+        width: 80px;
+        font-size: 12px;
+    }
+
+    .setting {
+        height: 40px;
+        width: 80px;
+        font-size: 12px;
+    }
+
+    .factory-image {
+        background-position-y: 70%;
+    }
+
     #about-text {
         font-size: 4vh;
-        line-height: 5vh;
-    }
-}
-
-@media only screen and (max-width: 500px) {
-    .header {
-        grid-template-columns: 8fr 2fr 3fr 3fr;
-    }
-}
-
-@media only screen and (max-width: 320px) {
-    #analysis-text {
-        color: aliceblue;
-        font-size: 5vh;
-        line-height: 5vh;
     }
 
-    #analysis-description {
-        color: aliceblue;
+    .about-button {
         font-size: 2vh;
-        line-height: 2vh;
+        width: 25vw;
+    }
+
+    .section-4 {
+        height: 140vh;
+    }
+
+    .section-5 {
+        grid-template-columns: 4fr 1fr 10fr;
+    }
+
+    .contact-us {
+        margin-right: 0;
+        padding-left: 3vw;
+        grid-row: 2/3;
+        grid-column: 1/2;
+        font-size: 3vh;
     }
 }
 
-/* transitions */
-/* @keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateX(-20%);
+@media (max-width:620px) {
+    .hero-background {
+        grid-template-columns: 2fr 2fr;
     }
 
-    100% {
-        opacity: 1;
-        transform: translateX(0);
+    .hero-button {
+        width: 30vw;
     }
 }
 
-@-moz-keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateX(-20%);
+@media (max-width:570px) {
+    .section-4 {
+        height: 160vh;
     }
 
-    100% {
-        opacity: 1;
-        transform: translateX(0);
+    h2 {
+        font-size: 4.5vh;
+    }
+
+    .quote {
+        font-size: 3vh;
+    }
+    .bg-i::after {
+        background: url("./Images/factory-hq-4.jpg");
+        background-size: cover;
+        background-position-y: 100%;
+        background-position-x: center;
     }
 }
 
-@-webkit-keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateX(-20%);
+@media (max-width:480px) {
+    .hero-button {
+        width: 40vw;
     }
 
-    100% {
-        opacity: 1;
-        transform: translateX(0);
+    #logo {
+        height: 6vh;
+    }
+
+    .login {
+        height: 30px;
+        width: 60px;
+        font-size: 10px;
+    }
+
+    .setting {
+        height: 30px;
+        width: 60px;
+        font-size: 9px;
+    }
+
+    .hero-button {
+        font-weight: 500;
+    }
+
+    .about-button {
+        width: 35vw;
+    }
+    .section-2 {
+        grid-template-rows: 2vh 55vh 25vh auto;
+        grid-template-columns: auto 60vw auto;
+    }
+    .about-button{
+        width: 50vw;
+    }
+    .section-3 {
+        grid-template-rows: 2vh 55vh 25vh auto;
+        grid-template-columns: auto 60vw auto;
+    }
+    .section-4{
+        height: 200vh;
+    }
+    .section-5 {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        height: 70vh;
+    }
+    
+    .web-name {
+        padding-left: 5vw;
+        margin-top: 0;
+        padding-top: 2vh;
+        margin-left: 0;
+        grid-row: 2/3;
+        grid-column: 1/2;
+
+    }
+    
+    .contact-us {
+        padding-left: 5vw;
+        margin-left: 0;
+        grid-row: 3/4;
+        grid-column: 1/2;
+    }
+    
+    .quote {
+        padding-left: 5vw;
+        margin-bottom: auto;
+        margin-left: 0;
+        margin-right: auto;
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+    
+    #contact {
+        font-size: 3vh;
+    }
+    
+    #email {
+        font-size: 2vh;
+    }
+    .section-2 {
+        grid-template-rows: 2vh 55vh 25vh auto;
+        grid-template-columns: auto 80vw auto;
+    }
+    .about-button{
+        width: 50vw;
+    }
+    .section-3 {
+        grid-template-rows: 2vh 40vh 15vh auto;
+        grid-template-columns: auto 80vw auto;
     }
 }
 
-@-o-keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateX(-20%);
+@media (max-width:375px){
+    .section-4{
+        height: 250vh;
+    }
+    .header {
+        grid-template-columns: 8fr 1fr 3fr 3fr;
     }
 
-    100% {
-        opacity: 1;
-        transform: translateX(0);
+    #logo {
+        height: 5vh;
+    }
+
+    .login {
+        height: 30px;
+        width: 60px;
+        font-size: 10px;
+    }
+
+    .setting {
+        height: 30px;
+        width: 60px;
+        font-size: 9px;
+    }
+    .hero-background {
+        width: 85vw;
+        height: 65vh;
+        grid-template-columns: 2fr 1fr;
+    }
+    .hero-button{
+        width: 70vw;
     }
 }
 
-@-ms-keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateX(-20%);
-    }
 
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*

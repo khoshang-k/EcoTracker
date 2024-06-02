@@ -10,52 +10,53 @@
 </head>
 
 <body width="device-width"> <!--to change width according to device width-->
-    <!-- section 1 HTML -->
-    <div class="section-1">
-        <div class="header">
-            <div class="logo">
-                <img id="logo-image" src="./Images/LogoWithTextHorizontal.svg"
-                    alt="EcoTracker: Transform your carbon impact" height="90vh"
-                    title="EcoTracker: Transform your carbon impact">
+    <main>
+        <!-- section 1 HTML -->
+        <div class="section-1">
+            <div class="header">
+                <div class="logo">
+                    <img id="logo-image" src="./Images/LogoWithTextHorizontal.svg"
+                        alt="EcoTracker: Transform your carbon impact" height="90vh"
+                        title="EcoTracker: Transform your carbon impact">
+                </div>
+                <div class="login-div"><button onclick="document.location='//location to login page '" class="login">Log
+                        In</button></div>
+                <div class="setting-div">
+                    <button class="setting">Settings &#11167; </button>
+                    <div class="dropdown-content">
+                        <a href="#">Site map</a>
+                        <a href="#">Language</a>
+                    </div>
+                </div>
             </div>
-            <div class="login-div"><button onclick="document.location='//location to login page '" class="login">Log
-                    In</button></div>
-            <div class="setting-div">
-                <button class="setting">Settings &#11167; </button>
-                <div class="dropdown-content">
-                    <a href="#">Site map</a>
-                    <a href="#">Language</a>
+            <div class="hero-image">
+                <div class="hero-background">
+                    <p id="hero-heading">Take the First Step Towards a Greener Future</p>
+                    <p id="hero-detail">Calculate Your Carbon Footprint and Understand your impact on ​the
+                        environment and
+                        discover practical ways to reduce it.</p>
+                    <button class="hero-button">Get Started Today</button>
                 </div>
             </div>
         </div>
-        <div class="hero-image">
-            <div class="hero-background">
-                <p id="hero-heading">Take the First Step Towards a Greener Future</p>
-                <p id="hero-detail">Calculate Your Carbon Footprint and Understand your impact on<br> ​the
-                    environment and
-                    discover practical ways to reduce it.</p>
-                <button class="hero-button">Get Started Today</button>
-            </div>
-        </div>
-    </div>
-    <!-- Section 2 HTML -->
+        <div class="break-i"></div>
+        <!-- Section 2 HTML -->
+        <div class="factory-image bg-i"></div>
     <div class="section-2">
-        <p id="about-text">Our easy-to-use<br> ​carbon footprint <br>​calculator helps<br> ​you understand<br> ​your
-            carbon<br> ​emissions</p>
+        <p id="about-text">Our easy-to-use​ carbon footprint ​calculator helps ​you understand ​your
+            carbon ​emissions</p>
         <button class="about-button">Find out more</button>
-        <div class="image-section-2">
-            <img class="factory-image" src="./Images/factory.png" alt="factory emitting smoke"
-                title="factory emitting smoke">
         </div>
     </div>
+    <div class="break-ii"></div>
     <!-- Section 3 HTML -->
+    <div class="analysis-image bg-ii"></div>
     <div class="section-3">
-        <div class="image-section-3">
-            <img class="analysis-image" src="./Images/analysis.png" alt="random graph and bar charts" title="analysis">
-        </div>
         <div class="analysis-section-3">
             <p id="analysis-text">View <mark class="dif-text">Analysis</mark> <br>​and get<br><mark
                     class="dif-text">Suggestions</mark></p>
+        </div>
+        <div class="analysis-section-3-ii">
             <p id="analysis-description">Comprehensive Analysis of your data <br>​helps you understand your impact.</p>
         </div>
     </div>
@@ -94,6 +95,7 @@
         </div>
     </div>
     <!-- button to go on top of website -->
+    </main>
     <button onclick="topFunction()" id="myBtn" title="Go to top"> &uarr; </button>
-    <script src="homepage.js"></script>
+    <script src="./homepage.js"></script>
 </body>
