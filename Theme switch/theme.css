@@ -1,0 +1,25 @@
+[data-theme="light"] {
+    --text: #071714;
+    --background: #fbfbfe;
+}
+
+[data-theme="dark"] {
+    --text: #e8f8f5;
+    --background: #010104;
+}
+.theme-button {
+    position: absolute;
+    top: 4vh;
+    left: 95vw;
+}
+
+#toggle-btn {
+    height: 40px;
+    width: 40px;
+    font-size: 30px;
+    color: var(--background);
+    background-color: var(--text);
+}
+body{
+    background-color: var(--background);
+}
