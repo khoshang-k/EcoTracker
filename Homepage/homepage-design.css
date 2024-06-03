@@ -96,7 +96,7 @@ div {
     background-color: #f1f1f1;
     min-width: 80px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    z-index: 101000;
 }
 
 .dropdown-content a {
@@ -105,19 +105,83 @@ div {
     text-decoration: none;
     display: block;
     font-size: medium;
+    z-index: 101000;
 }
 
 .dropdown-content a:hover {
     background-color: #ddd;
+    z-index: 101000;
 }
 
 
 .setting-div:hover .dropdown-content {
     display: block;
+    z-index: 101000;
 }
 
 .setting-div:hover .setting {
     background-color: #3e8e41;
+    z-index: 101000;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
 }
 
 .logo {
@@ -184,6 +248,7 @@ div {
     background-color: #fafcf8;
     margin-left: -10px;
     margin-right: -10px;
+    z-index:    -1;
 }
 
 .hero-background {
@@ -704,6 +769,7 @@ div {
     .quote {
         font-size: 3vh;
     }
+
     .bg-i::after {
         background: url("./Images/factory-hq-4.jpg");
         background-size: cover;
@@ -740,26 +806,31 @@ div {
     .about-button {
         width: 35vw;
     }
+
     .section-2 {
         grid-template-rows: 2vh 55vh 25vh auto;
         grid-template-columns: auto 60vw auto;
     }
-    .about-button{
+
+    .about-button {
         width: 50vw;
     }
+
     .section-3 {
         grid-template-rows: 2vh 55vh 25vh auto;
         grid-template-columns: auto 60vw auto;
     }
-    .section-4{
+
+    .section-4 {
         height: 200vh;
     }
+
     .section-5 {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         height: 70vh;
     }
-    
+
     .web-name {
         padding-left: 5vw;
         margin-top: 0;
@@ -769,14 +840,14 @@ div {
         grid-column: 1/2;
 
     }
-    
+
     .contact-us {
         padding-left: 5vw;
         margin-left: 0;
         grid-row: 3/4;
         grid-column: 1/2;
     }
-    
+
     .quote {
         padding-left: 5vw;
         margin-bottom: auto;
@@ -785,31 +856,35 @@ div {
         grid-row: 1/2;
         grid-column: 1/2;
     }
-    
+
     #contact {
         font-size: 3vh;
     }
-    
+
     #email {
         font-size: 2vh;
     }
+
     .section-2 {
         grid-template-rows: 2vh 55vh 25vh auto;
         grid-template-columns: auto 80vw auto;
     }
-    .about-button{
+
+    .about-button {
         width: 50vw;
     }
+
     .section-3 {
         grid-template-rows: 2vh 40vh 15vh auto;
         grid-template-columns: auto 80vw auto;
     }
 }
 
-@media (max-width:375px){
-    .section-4{
+@media (max-width:375px) {
+    .section-4 {
         height: 250vh;
     }
+
     .header {
         grid-template-columns: 8fr 1fr 3fr 3fr;
     }
@@ -829,12 +904,14 @@ div {
         width: 60px;
         font-size: 9px;
     }
+
     .hero-background {
         width: 85vw;
         height: 65vh;
         grid-template-columns: 2fr 1fr;
     }
-    .hero-button{
+
+    .hero-button {
         width: 70vw;
     }
 }
