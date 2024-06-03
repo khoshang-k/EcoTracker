@@ -169,8 +169,8 @@ body {
 
 .theme-button {
     position: absolute;
-    top: 5vh;
-    left: 90vw;
+    top: 4vh;
+    left: 95vw;
 }
 
 #toggle-btn {
@@ -469,6 +469,16 @@ form.sign-in-form {
         transform: translate(-50%, -100%);
         transition: 1s 0.8s ease-in-out;
     }
+    .theme-button {
+        position: absolute;
+        top: 3vh;
+        left: 95vw;
+    }
+    #toggle-btn {
+        height: 20px;
+        width: 20px;
+        font-size: 15px;
+    }
 
     .signin-signup,
     .container.sign-up-mode .signin-signup {
@@ -598,6 +608,15 @@ form.sign-in-form {
     .container.sign-up-mode:before {
         bottom: 28%;
         left: 50%;
+    }
+    .theme-button {
+        top: 2vh;
+        left: 95vw;
+    }
+    #toggle-btn {
+        height: 15px;
+        width: 15px;
+        font-size: 10px;
     }
 }
 
